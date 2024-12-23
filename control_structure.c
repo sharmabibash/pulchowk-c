@@ -96,7 +96,7 @@ statement. The sales tax is decided as:
  20% of the sale price for clothing items.
  24% of the sale price for liquor items
 Also, apply a 2% discount on the total price if the total price is more than Rs. 6000*/
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 int main()
 {
@@ -134,7 +134,7 @@ int main()
     }
     printf("Net amount : %.2f", net_payable);
     return 0;
-}
+}*/
 
 /* WAP in C to check enetred character is vowel or consonant */
 /*#include <stdio.h>
