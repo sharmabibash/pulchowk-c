@@ -162,35 +162,40 @@ int main() {
 }
 
 */
-/*
-case 2
+
+// case 2
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int n, count = 0;
     float sum = 0, num;
     scanf("%d", &n);
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         scanf("%f", &num);
-        if (num < 0) {
+        if (num < 0)
+        {
             continue;
         }
         sum += num;
         count++;
     }
 
-    if (count > 0) {
+    if (count > 0)
+    {
         printf("%.2f %.2f", sum, sum / count);
-    } else {
+    }
+    else
+    {
         printf("0.00 0.00");
     }
 
     return 0;
 }
 
-*/
-
+/*
 #include <stdio.h>
 
 int main()
@@ -214,3 +219,4 @@ int main()
 
     return 0;
 }
+*/

@@ -1,8 +1,6 @@
 
 // Q.4 do while
-/*
-
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main()
 {
@@ -214,31 +212,33 @@ int main()
 */
 
 // Case 2 QN.6
-/*#include <stdio.h>
+#include <stdio.h>
 int main()
 {
     int n, count = 0, i;
-    int sum = 0;
+    int sum = 0, num;
     printf("Enter number : ");
     scanf("%d", &n);
+    printf("Start Enter value : ");
     for (i = 1; i <= n; i++)
     {
-        if (n < 0)
+        scanf("%d", &num);
+        if (num < 0)
         {
             continue;
         }
-        sum = sum + i;
+        sum = sum + num;
         count++;
     }
     if (count > 0)
     {
         printf("The sum is : %d", sum);
-        float avg = (float)sum / n;
+        float avg = (float)sum / count;
         printf("\nThe average is : %.2f", avg);
         printf("\nTotal number is :%d", count);
     }
     return 0;
-}*/
+}
 
 /*
 #include <stdio.h>
