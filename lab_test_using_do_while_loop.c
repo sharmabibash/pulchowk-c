@@ -1,4 +1,4 @@
-
+/*Qn.1 :- WAP in c to calculate and display the count of palindrome numbers between ranges entered by the user using concept of do loop. and assign count to variable Q . and check whether Q is armstrong or not using concept of for loop After the do the following ... a) if variable Q is Armstorng , find and display the Qth term of Fibonacci series. b) if variable Q is not armstrong, find and display the (Q+1)th term of fibonacci series. Note use the concept of while loop only in fibonacci series problem*/
 /*
 #include <stdio.h>
 #include <math.h>
@@ -87,6 +87,104 @@ int main()
     }
 
     printf("\nTotal Fibonacci numbers up to the %d-th term: %d\n", q + 1, q + 1);
+
+    return 0;
+}
+*/
+
+/* Qn.2 :- Problem 1 (P1): Write a program in C to calculate the single-digit sum of a user-entered number using a while loop. The result should be stored in a variable R.
+
+Example: For the number 1532, the sum is calculated as 1 + 5 + 3 + 2 = 11 (multi-digit), then 1 + 1 = 2 (single-digit).
+Problem 2 (P2): Continue the program to check if the number R is prime or composite.
+
+Problem 3 (P3): Extend the program:
+
+If R is neither prime nor composite (usually referring to 1), find the Rth Fibonacci term.
+If R is prime, find the (R-1)th Fibonacci term.
+If R is composite, find the (R+1)th Fibonacci term.*/
+/*
+#include <stdio.h>
+
+int main()
+{
+    int num, sum, R;
+    printf("Enter any number: ");
+    scanf("%d", &num);
+
+    while (num >= 10)
+    {
+        sum = 0;
+        while (num > 0)
+        {
+            sum = sum + num % 10;
+            num = num / 10;
+        }
+        num = sum;
+    }
+    R = num;
+    printf("\nSingle digit sum: %d", R);
+
+    if (R == 1)
+    {
+        printf("\nNeither prime nor composite\n");
+    }
+    else
+    {
+        int prime = 1;
+        for (int i = 2; i * i <= R; i++)
+        {
+            if (R % i == 0)
+            {
+                prime = 0;
+                break;
+            }
+        }
+        if (prime)
+        {
+            printf("\nR is a prime number");
+        }
+        else
+        {
+            printf("\nR is not a prime number");
+        }
+    }
+
+    int first = 0, second = 1, next = 0;
+    int fibo;
+
+    if (R == 1)
+    {
+        fibo = R;
+    }
+    else
+    {
+        int prime = 1;
+        for (int i = 2; i * i <= R; i++)
+        {
+            if (R % i == 0)
+            {
+                prime = 0;
+                break;
+            }
+        }
+        if (prime)
+        {
+            fibo = R - 1;
+        }
+        else
+        {
+            fibo = R + 1;
+        }
+    }
+
+    for (int i = 0; i < fibo; i++)
+    {
+        next = first + second;
+        first = second;
+        second = next;
+    }
+
+    printf("\nRequired Fibonacci term: %d\n", (fibo == 0) ? 0 : first);
 
     return 0;
 }
