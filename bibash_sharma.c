@@ -33,3 +33,20 @@ int main()
 // char --> %c for single character or %s for multiple character
 // float --> %f for floating numbers or decimal values
 */
+
+// Area of cirlce
+
+#include <stdio.h>
+void main()
+{
+    float x, y, multiple;
+
+    printf("Enter any two numbers for display its multiple :-");
+    scanf("%f,%f", &x, &y);
+    multiple = x * y;
+    printf("Multiple :- %f", multiple);
+    getch();
+    // return 0;
+}
+// Q.2 WAP to multiple of two number which is given by user. use floating
+// Q.3 WAP to find sum of 5 number which is given by user. use floating .
