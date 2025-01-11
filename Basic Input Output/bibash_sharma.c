@@ -4,7 +4,7 @@
 // #include <stdlib.h> // it is sdvanced lib files
 // #include <math.h>   // it is used for math functions
 
-//  --> used for single line comment
+//  --> used for single line comment.
 /*  --> used for multiple line comments
  */
 
@@ -101,7 +101,7 @@ int main()
     printf("%s", usha);
 }*/
 
-//  Q.5 WAP to enter anme by user and display it using puts(),gets():
+// Q.5 WAP to enter anme by user and display it using puts(),gets():
 /*#include <stdio.h>
 int main()
 {
@@ -109,3 +109,9 @@ int main()
     gets(usha);
     puts(usha);
 }*/
+
+// int , char, float, double,
+//  printf,scanf,getchar,putchar,gets,puts
+// include<stdio.h>
+// include<string.h>
+// include<math.h>  --> c(pow,4), sqrt(a),
