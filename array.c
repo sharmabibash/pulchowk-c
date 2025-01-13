@@ -52,7 +52,6 @@ int main()
     return 0;
 }
 */
-
 /*Write a program to read a 4*4 square matrix, find the minimum value of that matrix and
 assign it to variable min, and replace all the elements of the principal diagonal with the
 min if the element is odd otherwise replace all the elements of secondary elements with
@@ -62,7 +61,7 @@ min and display the updated matrix.*/
 #include <math.h>
 int main()
 {
-    int matA[20][20], rows, cols, i, j, min, max;
+    int matA[20][20], rows, cols, i, j, min=0, max=0;
     min = max;
     printf("Enter the rows : ");
     scanf("%d", &rows);
@@ -84,11 +83,11 @@ int main()
     {
         for (j = 0; j < cols; j++)
         {
-            if (i == j && matA[i][j] % 2 == 0)
+            if (i == j && min % 2 != 0)
             {
                 matA[i][j] = min;
             }
-            else if (i + i == 3)
+            else if (i + j == 3 && min%2==0)
             {
                 matA[i][j] = min;
             }
@@ -103,8 +102,7 @@ int main()
         }
         printf("\n");
     }
-}
-*/
+}*/
 
 /*Write a program to find the largest and smallest element of an array, display the numbers
 in ascending as well as descending order using a single function and display the result in
@@ -185,3 +183,50 @@ int main()
     con[20] = str1[20] + str2[20];
     printf("%s", con[20]);
 }*/
+#include <stdio.h>
+#include <limits.h>
+
+int main()
+{
+    int matA[4][4], i, j, min = INT_MAX;
+
+    printf("Start inserting values (4x4 matrix):\n");
+    for (i = 0; i < 4; i++)
+    {
+        for (j = 0; j < 4; j++)
+        {
+            scanf("%d", &matA[i][j]);
+            if (matA[i][j] < min)
+            {
+                min = matA[i][j];
+            }
+        }
+    }
+
+    if (min % 2 != 0)
+    {
+        for (i = 0; i < 4; i++)
+        {
+            matA[i][i] = min;
+        }
+    }
+    else
+    {
+        for (i = 0; i < 4; i++)
+        {
+            matA[i][3 - i] = min;
+        }
+    }
+
+    printf("Updated matrix:\n");
+    for (i = 0; i < 4; i++)
+    {
+        for (j = 0; j < 4; j++)
+        {
+            printf("%d\t", matA[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
