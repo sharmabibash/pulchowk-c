@@ -58,19 +58,16 @@ min if the element is odd otherwise replace all the elements of secondary elemen
 min and display the updated matrix.*/
 
 /*#include <stdio.h>
-#include <math.h>
+#include <limits.h>
+
 int main()
 {
-    int matA[20][20], rows, cols, i, j, min=0, max=0;
-    min = max;
-    printf("Enter the rows : ");
-    scanf("%d", &rows);
-    printf("Enter the column : ");
-    scanf("%d", &cols);
-    printf("Start inserting vlaues : \n");
-    for (i = 0; i < rows; i++)
+    int matA[4][4], i, j, min = INT_MAX;
+
+    printf("Start inserting values (4x4 matrix):\n");
+    for (i = 0; i < 4; i++)
     {
-        for (j = 0; j < cols; j++)
+        for (j = 0; j < 4; j++)
         {
             scanf("%d", &matA[i][j]);
             if (matA[i][j] < min)
@@ -79,30 +76,35 @@ int main()
             }
         }
     }
-    for (i = 0; i < rows; i++)
+
+    if (min % 2 != 0)
     {
-        for (j = 0; j < cols; j++)
+        for (i = 0; i < 4; i++)
         {
-            if (i == j && min % 2 != 0)
-            {
-                matA[i][j] = min;
-            }
-            else if (i + j == 3 && min%2==0)
-            {
-                matA[i][j] = min;
-            }
+            matA[i][i] = min;
         }
     }
-    printf("Updated matrix : \n");
-    for (i = 0; i < rows; i++)
+    else
     {
-        for (j = 0; j < cols; j++)
+        for (i = 0; i < 4; i++)
+        {
+            matA[i][3 - i] = min;
+        }
+    }
+
+    printf("Updated matrix:\n");
+    for (i = 0; i < 4; i++)
+    {
+        for (j = 0; j < 4; j++)
         {
             printf("%d\t", matA[i][j]);
         }
         printf("\n");
     }
-}*/
+
+    return 0;
+}
+*/
 
 /*Write a program to find the largest and smallest element of an array, display the numbers
 in ascending as well as descending order using a single function and display the result in
@@ -170,63 +172,39 @@ int main()
 
 /*WAP in C to concatenate two strings entered by the user without using the string
 handling function.*/
-
 /*#include <stdio.h>
 int main()
 {
-    char str1[20], str2[20];
-    char con[20];
-    printf("Enter first string : ");
-    scanf("%s", str1);
-    printf("Enter second string : ");
-    scanf("%s", str2);
-    con[20] = str1[20] + str2[20];
-    printf("%s", con[20]);
-}*/
-#include <stdio.h>
-#include <limits.h>
-
-int main()
-{
-    int matA[4][4], i, j, min = INT_MAX;
-
-    printf("Start inserting values (4x4 matrix):\n");
-    for (i = 0; i < 4; i++)
+    char str1[100], str2[100], result[200];
+    int i = 0, j = 0;
+    printf("Enter the first string: ");
+    fgets(str1, sizeof(str1), stdin);
+    printf("Enter the second string: ");
+    fgets(str2, sizeof(str2), stdin);
+    while (str1[i] != '\0')
     {
-        for (j = 0; j < 4; j++)
+        if (str1[i] == '\n')
         {
-            scanf("%d", &matA[i][j]);
-            if (matA[i][j] < min)
-            {
-                min = matA[i][j];
-            }
+            str1[i] = '\0';
+            break;
         }
+        i++;
     }
-
-    if (min % 2 != 0)
+    i = 0;
+    while (str1[i] != '\0')
     {
-        for (i = 0; i < 4; i++)
-        {
-            matA[i][i] = min;
-        }
+        result[i] = str1[i];
+        i++;
     }
-    else
+    while (str2[j] != '\0' && str2[j] != '\n')
     {
-        for (i = 0; i < 4; i++)
-        {
-            matA[i][3 - i] = min;
-        }
+        result[i] = str2[j];
+        i++;
+        j++;
     }
-
-    printf("Updated matrix:\n");
-    for (i = 0; i < 4; i++)
-    {
-        for (j = 0; j < 4; j++)
-        {
-            printf("%d\t", matA[i][j]);
-        }
-        printf("\n");
-    }
+    result[i] = '\0';
+    printf("Concatenated string: %s\n", result);
 
     return 0;
 }
+*/
