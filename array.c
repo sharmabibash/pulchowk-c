@@ -1,4 +1,4 @@
-/*WAP in C to find the sum of principal and secondary diagonal elements of a 2D array
+/*1. WAP in C to find the sum of principal and secondary diagonal elements of a 2D array
 and check whether the sum is an Armstrong number or not.*/
 
 /*#include <stdio.h>
@@ -50,9 +50,9 @@ int main()
     }
 
     return 0;
-}
-*/
-/*Write a program to read a 4*4 square matrix, find the minimum value of that matrix and
+}*/
+
+/*2. Write a program to read a 4*4 square matrix, find the minimum value of that matrix and
 assign it to variable min, and replace all the elements of the principal diagonal with the
 min if the element is odd otherwise replace all the elements of secondary elements with
 min and display the updated matrix.*/
@@ -105,8 +105,7 @@ int main()
     return 0;
 }
 */
-
-/*Write a program to find the largest and smallest element of an array, display the numbers
+/*3. Write a program to find the largest and smallest element of an array, display the numbers
 in ascending as well as descending order using a single function and display the result in
 the calling function.*/
 /*#include <stdio.h>
@@ -170,7 +169,7 @@ int main()
     return 0;
 }*/
 
-/*WAP in C to concatenate two strings entered by the user without using the string
+/*4. WAP in C to concatenate two strings entered by the user without using the string
 handling function.*/
 /*#include <stdio.h>
 int main()
@@ -208,3 +207,36 @@ int main()
     return 0;
 }
 */
+
+/*WAP in C to check whether a string entered by the user is palindrome or not without
+using the string handling function.*/
+#include <stdio.h>
+int main()
+{
+    char str[100];
+    int length = 0, isPalindrome = 1;
+    printf("Enter a string to check palindrome or not : ");
+    fgets(str, sizeof(str), stdin);
+
+    while (str[length] != '\0' && str[length] != '\n')
+    {
+        length++;
+    }
+    for (int i = 0; i < length; i++)
+    {
+        if (str[i] != str[length - i - 1])
+        {
+            isPalindrome = 0;
+            break;
+        }
+    }
+    if (isPalindrome)
+    {
+        printf("String is Palindrome ");
+    }
+    else
+    {
+        printf("String is not Palindrome ");
+    }
+    return 0;
+}
