@@ -28,8 +28,8 @@ int main()
 
     printf("The sum is: %d\n", sum);
     return 0;
-}
-*/
+}*/
+
 // while loop
 /*
 #include <stdio.h>
@@ -183,8 +183,8 @@ int main()
 */
 
 // Case 1 QN.6
-/*
-#include <stdio.h>
+
+/*#include <stdio.h>
 int main()
 {
     int n, count = 0, i;
@@ -208,8 +208,7 @@ int main()
         printf("\nTotal number is :%d", count);
     }
     return 0;
-}
-*/
+}*/
 
 // Case 2 QN.6
 /*#include <stdio.h>
@@ -256,7 +255,7 @@ int main()
 }*/
 
 /*WAP in c to generate fibonancies series for n number whichis given by user*/
-#include <stdio.h>
+/*#include <stdio.h>
 
 void fibbo(int n);
 
@@ -303,3 +302,4 @@ void fibbo(int n)
         }
     }
 }
+*/

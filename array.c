@@ -205,12 +205,11 @@ int main()
     printf("Concatenated string: %s\n", result);
 
     return 0;
-}
-*/
+}*/
 
-/*WAP in C to check whether a string entered by the user is palindrome or not without
+/*5. WAP in C to check whether a string entered by the user is palindrome or not without
 using the string handling function.*/
-#include <stdio.h>
+/*#include <stdio.h>
 int main()
 {
     char str[100];
@@ -240,3 +239,4 @@ int main()
     }
     return 0;
 }
+*/
