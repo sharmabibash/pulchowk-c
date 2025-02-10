@@ -147,7 +147,7 @@ int main()
 
 /*3. WAP to check the nth term of the Fibonacci series is even or odd using the concept of recursive function.*/
 
-#include <stdio.h>
+/*#include <stdio.h>
 int fibbo(int n)
 {
     if (n == 1)
@@ -175,4 +175,4 @@ int main()
     scanf("%d", &n);
     checkEvenOdd(n);
     return 0;
-}
+}*/
