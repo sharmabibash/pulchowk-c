@@ -5,7 +5,7 @@ Inputs the name, roll number, and marks in 5 subjects for 10 students.
 Calculates the average marks for each student.
 Prints the details of students whose average marks are above 80.
 */
-#include <stdio.h>
+/*#include <stdio.h>
 struct student {
     char name[50];
     int roll;
@@ -52,7 +52,7 @@ int main() {
     inputFunction();
     outputFunction();
     return 0;
-}
+}*/
 
 
 
