@@ -106,9 +106,9 @@ int main() {
 
 /*3. Write a program to find the largest and smallest element of an array using a
 single function and display the result in calling function.*/
-/*#include <stdio.h>
+#include <stdio.h>
 
-void findMinMax(int arr[], int size, int *min, int *max) {
+/*void findMinMax(int arr[], int size, int *min, int *max) {
     *min = *max = arr[0];
     for (int i = 1; i < size; i++) {
         if (arr[i] < *min) {

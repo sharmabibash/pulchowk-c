@@ -31,7 +31,7 @@ int main() {
     return 0;
 }*/
 
-/*WAP to input and display the details of n number of students entered by the user by
+/*2. WAP to input and display the details of n number of students entered by the user by
 passing structure by reference to the function.*/
 /*#include <stdio.h>
 #include <stdlib.h>
@@ -90,7 +90,7 @@ int main() {
 
 /*3. Write a program to calculate the sum and average of integer numbers between M and N
 using the concept of array and pointer.*/
-/*#include <stdio.h>
+#include <stdio.h>
 
 void calculateSumAndAverage(int *arr, int n, int *sum, float *avg) {
     *sum = 0;
@@ -123,4 +123,3 @@ int main() {
 
     return 0;
 }
-*/
